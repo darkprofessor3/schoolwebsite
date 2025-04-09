@@ -13,133 +13,145 @@
             font-style: normal;
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-       @media screen and (max-width: 600px) {
-    .header {
-        flex-wrap: wrap; /* allow wrapping only on mobile */
-        justify-content: center;
-        padding: 10px;
-        gap: 10px;
-    }
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    .nav-links {
-        flex-basis: 100%;
-        justify-content: center;
+body {
+    background-image: url("outdoor-play-equipment-toys.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.header {
+    background-color: rgb(177, 127, 243);
+    border: 2px solid black;
+    width: 100%;
+    min-height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+}
+
+.logo {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.header h1 {
+    color: rgb(33, 10, 53);
+    font-family: 'AngelDemo', sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(1rem, 3.5vw, 1.6rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    text-align: center;
+}
+
+span {
+    font-family: 'AngelDemo';
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: rgb(91, 91, 214) !important;
+    cursor: pointer;
+}
+
+div {
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: rgb(33, 10, 53);
+    margin-bottom: 20px;
+}
+
+.admission {
+    padding: 15px 30px;
+    background-color: transparent;
+    border: 2px solid rgb(70, 61, 61);
+    border-radius: 19px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.admission:hover {
+    background-color: rgb(155, 151, 151);
+}
+
+/* ✅ Mobile First Adjustments */
+@media screen and (max-width: 600px) {
+    .header {
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
     }
 
     .logo {
-        order: -1; /* move the logo up if needed */
+        order: -1;
+        width: 100%;
+        justify-content: center;
     }
 
     .header h1 {
-        font-size: clamp(0.8rem, 4vw, 1.2rem);
+        font-size: clamp(0.9rem, 5vw, 1.2rem);
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+    .admission {
+        font-size: 16px;
+        padding: 12px 25px;
     }
 }
-
-        .header {
-            background-color: rgb(177, 127, 243);
-            border: 2px solid black;
-            width: 100%;
-            min-height: 80px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-            z-index: 1000;
-            flex-wrap: nowrap;
-            /* 🧑‍💻 default: one line for desktop */
-            overflow-x: hidden;
-        }
-        
-        .logo {
-            flex-grow: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 10px;
-            min-width: 0;
-        }
-        
-        .header h1 {
-            color: rgb(33, 10, 53);
-            font-family: 'AngelDemo', sans-serif;
-            text-transform: uppercase;
-            font-size: clamp(1rem, 2.5vw, 1.8rem);
-            /* good size balance */
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 100%;
-            text-align: center;
-        }
-        
-        span {
-            font-family: 'AngelDemo';
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            font-size: 18px;
-            color: black;
-            padding: 10px;
-            transition: color 0.3s ease-in-out;
-        }
-        
-        .nav-links a:hover {
-            text-decoration: underline;
-            color: rgb(91, 91, 214) !important;
-            cursor: pointer;
-        }
-        
-        body {
-            background-image: url("outdoor-play-equipment-toys.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 0 80px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-            padding-top: 100px;
-        }
-        
-        div {
-            text-align: center;
-        }
-        
-        h2 {
-            font-size: 24px;
-            color: rgb(33, 10, 53);
-            margin-bottom: 20px;
-        }
-        
-        .admission {
-            padding: 15px 30px;
-            background-color: transparent;
-            border: 2px solid rgb(70, 61, 61);
-            border-radius: 19px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        
-        .admission:hover {
-            background-color: rgb(155, 151, 151);
-        }
     </style>
 </head>
 
